@@ -19,7 +19,7 @@
 html
 {
     font-size: 62.5%;
-    background-color: bisque;
+    background-color: whitesmoke;
 }
 
 *
@@ -89,7 +89,6 @@ header
     padding: 0 5rem;
     background-image: url("Imagenes/estudios.jpg");
     height: 70vh;
-
     background-size: cover;
     background-position: center
 }
@@ -158,7 +157,7 @@ header
 
 #servicios div p
 {
-    color: burlywood;
+    color: rgb(214, 163, 96);
     font-size: 2rem;
 }
 
@@ -168,21 +167,86 @@ header
     text-decoration: none;
     color: black;
     padding: 1rem 3rem;
-    border: 1rem solid aqua;
+    border: 0.5rem solid grey;
     border-radius: 3rem;
     margin-top: 2rem;
     transition: all 0.3s;
-    font-size: 2rem;    
+    font-size: 2rem;
     text-transform: uppercase;
 }
 
 .boton:hover
 {
-    background: aqua;
+    background: cadetblue;
     color: white;
 }
 
+/************** SLIDER ******************/
+#section-slider{
+    background-color: antiquewhite;
+}
+.slider{
+    max-width: 90rem;
+    width: 100%;
+    height: auto;
+    margin: 5rem auto 0;
+    overflow: hidden;
+    
+}
+.slider ul{
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+}
 
+.slider li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider img{
+    width: 100%;
+    height: 60rem; 
+    padding: 5rem 0 5rem 0;
+}
+
+@keyframes slide {
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+
+    /* 80%{margin-left: -400%;}
+    95%{margin-left: -400%;} */
+}
+/*************** FIN SLIDER ***********************************/
+/*************** ICONOS **************************************/
+#iconos{
+    padding: 0 5rem;
+    background-color: rgba(51, 147, 177);
+ }
+ .contenido-iconos{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+ }
+
+ .contenido-iconos div{
+    flex: 1;
+    margin: 2rem 0;
+    border-right: 0.2rem solid rgba(47, 84, 95, 0.582);
+ }
+
+/*************** fin iconos *********************************/
 @media(max-width: 768px)
 {
 
@@ -197,13 +261,14 @@ header
         position: fixed;
         width: 100%;
         height: 100vh;
-        background: rgba(51, 147, 177, 0.582);
+        background-color: rgba(51, 147, 177);
         right: -100%;
         top: 0;
         text-align: center;
         padding: 10rem 0;
         z-index: 100;
         transition: 1s;
+
     }
 
     .menu a
@@ -222,6 +287,8 @@ header
     #check:checked~.menu
     {
         right: 0;
+        overflow: hidden;
+
     }
 
     #servicios
