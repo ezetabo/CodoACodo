@@ -173,7 +173,7 @@ main>div{
 }
 .parrafo-registro{
 	font-size: 2rem;
-	font-family: "mermaid";
+	font-family: sans-serif;
 }
 
 
@@ -184,6 +184,7 @@ section>aside{
 	width:50%;
 	min-height: 180px;
 	margin: 1rem;
+    
 }
 
 aside>.formulario{
@@ -197,13 +198,12 @@ label{
 	display: block;
 	font-size: 2rem;
 	margin-left: 2.1rem;
-	font-family: "mermaid";
+	font-family: sans-serif;
     padding: 1rem;
 	
 }
 .input-rows{
 	display: block;
-	
 	box-sizing: border-box;
 	font-size: 1.5rem;
 	float:center;
@@ -214,21 +214,8 @@ label{
 	appearance: none;
     border-radius: 0.25rem;
 	background-clip: padding-box;
-	margin-left: 1.5rem;
-	
-}
-input {
-    writing-mode: horizontal-tb !important;
-    text-rendering: auto;
-    letter-spacing: normal;
-    word-spacing: normal;
-    line-height: normal;
-    text-transform: none;
-    text-indent: 0px;
-    text-shadow: none;
 	text-align: start;
     appearance: auto;
-    -webkit-rtl-ordering: logical;
     cursor: text;
     margin: 0em;
     padding: 1px 2px;
@@ -236,16 +223,35 @@ input {
     border-style: inset;
     border-color: white;
 }
-input:focus{
-  /* Destacado adicional para elementos que tienen el cursor */
-  border-color: #000;
+input:hover{
+    border-color:#000;
 }
+
+.parrafo-error{
+   font-size: 1.7rem;
+   display: none;
+   text-align: center;
+   
+}
+.parrafo-error-activo{
+    font-size: 1.7rem;
+    color: red;
+    display: block;
+    text-align: center;
+    font-family: sans-serif;
+    
+ }
 #send-button{
 	padding: 3px 4px;
-    border-width: 3px;
+    border-width: 1.5px;
 	background-color: skyblue;
-	font-size: 1.5rem;
+	font-size: 1.7rem;
 	margin: 1.5rem;
+    cursor: pointer;
+}
+#send-button:hover{
+    transform: scale(1.2,1.2);
+    
 }
 
 /**********************************ICONOS*************************************/
@@ -270,6 +276,34 @@ input:focus{
 
 
 /**************************************BREAKS*************************************/
+@media(max-width: 855px) {
+    
+    main>div{
+        width: 90%;
+        min-height: 180px;
+        min-width: 400px;
+        margin: 0.5rem;
+        height: auto;
+        float:center
+        
+        
+    }
+    
+    
+    section > aside{
+        border-left: none;
+        width: 90%;
+        min-width: 400px;
+        float:center;
+    }
+
+
+}	
+
+
+
+
+
 @media(max-width: 768px)
 {
 
@@ -319,29 +353,6 @@ input:focus{
         flex-direction: column;
     }
 
-    main>div{
-        min-height: 180px;
-        margin: 0.5rem;
-        height: auto;
-        float:left;
-        width:100%
-        
-    }
-    
-    
-    #section-formulario > aside{
-        border-left: none;
-        width: 100%;
-        min-width: 400px;
-    }
-
-
-
-
-
-
-
 
 }
 
-	
