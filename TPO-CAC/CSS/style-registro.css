@@ -270,10 +270,19 @@ input:hover{
 .contenido-iconos{
     flex: 1;
     margin: 2rem 0;
-    border-right: 0.2rem solid gray;
+    border-right: 0.2rem solid rgba(47, 84, 95, 0.582);
  }
-
-
+ #ultimo{
+    border-right: none;
+ }
+ #iconos a
+ {
+     color: black;
+     text-decoration: none;
+     padding: 0 1rem;
+     font-size: 1.5rem;
+     font-family: "metal"; 
+ }
 
 /**************************************BREAKS*************************************/
 @media(max-width: 855px) {
