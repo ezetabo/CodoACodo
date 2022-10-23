@@ -183,24 +183,22 @@ header
 
 /*************** ICONOS **************************************/
 #iconos{
-    padding: 0 5rem;
-    background-color: rgba(51, 147, 177);
- }
- .contenido-iconos{
-    display: flex;
+	display: flex;
     justify-content: space-between;
     text-align: center;
-    
+    padding:2rem;
+	width: 100%;
+    padding: 0 5rem;
+    background-color: rgba(51, 147, 177);
+	
  }
-
- .contenido-iconos div{
+.contenido-iconos{
     flex: 1;
     margin: 2rem 0;
     border-right: 0.2rem solid rgba(47, 84, 95, 0.582);
  }
-
  #ultimo{
-    border: none;
+    border-right: none;
  }
  #iconos a
  {
@@ -210,6 +208,7 @@ header
      font-size: 1.5rem;
      font-family: "metal"; 
  }
+
 /*************** fin iconos *********************************/
 
 @media(max-width: 768px)
