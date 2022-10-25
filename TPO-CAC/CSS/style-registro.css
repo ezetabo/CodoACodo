@@ -17,12 +17,9 @@
 }
 @font-face {
     font-family: "cabin";
-    src: url(Fonts02/Cabin-Regular.ttf);
+    src: url('Fonts/Cabin-Regular.ttf');
 }
-@font-face {
-    font-family: "mermaid";
-    src: url(Fonts/Mermaidsw.ttf);
-}
+
 html
 {
     font-size: 62.5%;
