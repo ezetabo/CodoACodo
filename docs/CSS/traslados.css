@@ -1,0 +1,262 @@
+@font-face
+{
+    font-family: "metal";
+    src: url('Fonts/Metal-Regular.ttf');
+}
+
+@font-face
+{
+    font-family: "caramel";
+    src: url('Fonts/Caramel-Regular.ttf');
+}
+
+@font-face
+{
+    font-family: "girasol";
+    src: url('Fonts/Girassol-Regular.ttf');
+}
+
+html
+{
+    font-size: 62.5%;
+    background-color: whitesmoke;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header
+{
+    height: 10rem;
+    padding: 0 5rem;
+    background: rgba(51, 147, 177, 0.582);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo
+{
+    font-size: 3rem;
+    color: rgb(0, 110, 255);
+    text-transform: uppercase;
+}
+
+.menu a
+{
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0 1rem;
+    font-size: 2rem;
+    font-family: "girasol";
+    transition: 0.5s;
+}
+
+.abrir-menu,
+.cerrar-menu
+{
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+.abrir-menu
+{
+    order: 1;
+}
+
+.menu a:hover,
+.abrir-menu:hover,
+.cerrar-menu:hover
+{
+    color: rgb(0, 110, 255);
+
+}
+
+#check
+{
+    display: none;
+}
+
+#imagen
+{
+    padding: 0 7rem;
+    background-image: url("Imagenes/nuevas.jpg");
+    height: 70vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#imagen::before
+{
+    content: "";
+    background: rgb(77, 77, 92, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    left: 0;
+}
+
+.contenido
+{
+    position: relative;
+    color: whitesmoke;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto
+{
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 1rem 0;
+    font-family: "caramel";
+}
+
+.texto span
+{
+    font-weight: 600;
+    font-family: "metal";
+}
+
+
+#nosotros
+{
+    padding: 5rem 5rem;
+    justify-content: center;
+    text-align: justify;
+}
+
+#general
+{
+    margin: auto;
+    width: 960px;
+    height: 800px;
+}
+
+
+#general h3
+{
+    color: peru;
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+#general h4
+{
+    color: peru;
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+#general p
+{
+    color: rgb(214, 163, 96);
+    font-size: 2rem;
+}
+
+#general ul
+{
+    color: peru;
+    font-size: 2rem;
+}
+
+
+#video{
+    max-width: 90rem;
+    width: 100%;
+    height: auto;
+    margin: 5rem auto 0;
+    overflow: hidden;
+
+}
+
+/*************** ICONOS **************************************/
+#iconos{
+	display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding:2rem;
+	width: 100%;
+    padding: 0 5rem;
+    background-color: rgba(51, 147, 177);
+	
+ }
+.contenido-iconos{
+    flex: 1;
+    margin: 2rem 0;
+    border-right: 0.2rem solid rgba(47, 84, 95, 0.582);
+ }
+ #ultimo{
+    border-right: none;
+ }
+ #iconos a
+ {
+     color: black;
+     text-decoration: none;
+     padding: 0 1rem;
+     font-size: 1.5rem;
+     font-family: "metal"; 
+ }
+
+/*************** fin iconos *********************************/
+
+@media(max-width: 768px)
+{
+
+    .abrir-menu,
+    .cerrar-menu
+    {
+        display: block;
+    }
+
+    .menu
+    {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(51, 147, 177);
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 10rem 0;
+        z-index: 100;
+        transition: 1s;
+
+    }
+
+    .menu a
+    {
+        display: block;
+        padding: 2rem;
+    }
+
+    #cerrar
+    {
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+    }
+
+    #check:checked~.menu
+    {
+        right: 0;
+        overflow: hidden;
+
+    }
+
+    #servicios
+    {
+        flex-direction: column;
+    }
+}
